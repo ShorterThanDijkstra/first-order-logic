@@ -142,3 +142,185 @@ p | q == !(!p & !q) == !(!(!p * !q)) == !p * !q == (p * p) * (q * q)
 8. !C -> (I | G)
 9. C | (!I & !G)
 10. (!C & J) -> (I | G) 
+
+=== 2.15
+1. C -> F
+2. !G -> !J
+3. (!G & !J) -> F
+4. J -> G
+5. J -> G
+6. J -> G
+7. J <-> G
+8. (C & !J) -> F
+9. (J | !C) -> !F
+10. J -> (F <-> !G)
+
+=== 2.16
+1. J -> G 
+2. !G -> I
+3. !I -> !G
+4. !C -> !F
+5. !(I | G) -> J 
+6. I -> (!G -> J)
+7. !I & J
+8. I & !G & J
+9. (F -> G) & I
+10. (C -> F) & J
+
+=== 2.18
+1. tautologous
+2. tautologous
+3. contingent
+4. contradictory
+5. tautologous
+6. tautologous
+7. contingent
+8. contradictory
+9. contingent
+10. tautologous 
+
+=== 3.01
+1. An 'acorn' contains 'corn'.
+2. 'One plus one' is not identical with 'twoG.
+3. Without a cat there would be no catastrophe.
+4. 'Sincerity' involves 'sin'.
+5. French is not French.
+6. 'One' is not identical with 'one'.
+7. George said I am not a wimp.
+8. Sentence 9 is true.
+9. Sentence 8 is false.
+10. I love the sound of 'a cellar door'.
+
+=== 3.02
+1. valid
+2. invalid
+3. valid
+4. valid
+5. invalid
+6. invalid
+7. valid
+8. invalid
+9. invalid
+10. invalid
+11. valid
+12. valid
+13. valid
+14. valid
+15. valid
+
+=== 3.06
+1.
+(1) + P -> (Q | R)
+(2) + !(Q | R)
+(3) ? !P
+(4) !P            (1),(2) MT
+
+2. 
+(1) + !P -> !Q
+(2) + !P
+(3) ? !Q
+(4) !Q            (1),(2) MP
+
+3.
+(1) + !P -> Q
+(2) + !Q
+(3) ? P
+(4) P             (1),(2) MT  
+
+4. 
+(1) + P -> Q
+(2) + !S
+(3) !(Q -> R) -> S
+(4) ? P -> R
+(5) Q -> R        (2),(3) MT
+(6) P -> R        (1),(5) HS
+
+5. 
+(1) + P -> !Q
+(2) + Q
+(3) + !S -> P
+(4) ? S
+(5) !P            (1),(2) MT
+(6) S             (3),(5) MT
+
+6. 
+(1) + P -> (Q -> R)
+(2) + P 
+(3) + Q
+(4) ? R
+(5) Q -> R        (1),(2) MP
+(6) R             (3),(5) MP
+
+7.
+(1) + !(P -> Q) -> R
+(2) + !R
+(3) + P
+(4) ? Q
+(5) P -> Q        (1),(2) MT
+(6) Q             (3),(5) MP
+
+8. 
+(1) + P -> Q
+(2) + Q -> R
+(3) + P
+(4) ? R   
+(5) P -> R        (1),(2) HS
+(6) R             (3),(5) MP
+
+9.
+(1) + P -> !Q
+(2) + Q
+(3) + R -> P
+(4) ? !R
+(5) !P            (1),(2) MT
+(6) !R            (3),(5) MT
+
+10. 
+(1) + !(P -> R) -> !Q
+(2) + P
+(3) + Q
+(4) ? R
+(5) P -> R        (1),(3) MT
+(6) R             (2),(5) MP
+
+11.
+(1) + !P -> !Q
+(2) + Q
+(3) + P -> (S & T)
+(4) ? S & T
+(5) P             (1),(2) MT
+(6) S & T         (3),(5) MP
+
+12. 
+(1) + P -> Q
+(2) + Q -> !R
+(3) + R
+(4) ? !P
+(5) !Q            (2),(3) MT 
+(6) !P            (1),(5) MT
+
+13.
+(1) + !(P -> Q) -> R
+(2) + R -> S
+(3) + !S
+(4) ? P -> Q
+(5) !R            (2),(3) MT
+(6) P -> Q        (1),(5) MT
+
+14.
+(1) + !(P & !S) -> (Q | R)
+(2) + (Q | R) -> !T
+(3) + T
+(4) ? P & !S
+(5) !(Q | R)       (2),(3) MT
+(6) P & !S         (1),(5) MT
+
+15.
+(1) + (P -> S) -> T
+(2) + T -> !(Q | !R)
+(3) + ((P -> S) -> !(Q | !R)) -> U
+(4) ? U
+(5) (P -> S) -> !(Q | !R)  (1),(2) HS
+(6) U                      (3),(5) MP
+
+
