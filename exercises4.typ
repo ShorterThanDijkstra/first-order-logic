@@ -122,9 +122,35 @@
 7. ∃x((Wx ∧ Sx) ⊃ Acx)
 8. Acf ⊃ ∃x(Wx ∧ Sx ∧ Acx)
 9. ∀x(Sx ⊃ ¬Wx) ⊃ ∀x¬Wx
-10. ∀x((Wx ∧ Sx) ⊃ ¬∃yAyx)
+10. ∀x((Wx ∧ Sx) ⊃ ¬∃yAxy)
 11. ∀x((Px ∧ ¬Wx) ⊃ ¬∃y(Py ∧ Ayx))
 12. ¬∀x((Wx ∧ Sx) ⊃ Afx)
 13. ∀x((Wx ∧ Sx) ⊃ ∃y(Py ∧ Ayx))
 14. ∃x((Wx ∧ Sx) ∧ ∀y(Py ⊃ Ayx))
 15. ∀x((Wx ∧ Sx) ⊃ ∀y(Py ⊃ Ayx))
+
+=== 4.09
+1. Agj
+2. g = h
+3. Agj ∧ ∀x(Axj ⊃ x = g)
+4. ∃x(Axj ∧ ¬Sx ∧ ∀y(Ayj ⊃ x = y))
+5. ∃x(Axf ∧ Axj ∧ ∀y((Ayf ∨ Ayj) ⊃ x = y))
+6. j =/= f
+7. ¬Afj ⊃ ¬(Afj ∧ ∀x(Axj ⊃ x = f)
+8. (g = h) ⊃ (Sg ⊃ Sh)
+9. (Sg ∧ ¬Sh) ⊃ g =/= h
+10. Ahj ∨ h =/= g
+11. Sf ∧ ∀x(Sx ⊃ x = f)
+12. ∃xSx ⊃ (Sf ∧ ∀x(Sx ⊃ x = f))
+13. ¬∃x(Sx ∧ Axf)
+14. Agj ⊃ (¬Sg ⊃ g =/= h)
+15. ¬∀x(Sx ⊃ Axj)
+
+=== 4.11
+1. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx)
+2. ∃x(Sx ∧ Wx)
+3. ∀x((Sx ∧ Wx) ⊃ ∀y((Sx ∧ Wx) ⊃ x = y))
+4. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ ∃y(Py ∧ y =/= x ∧ Axy))
+5. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ ∀y(Py ⊃ Ayx))
+6. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ Agx)
+7. ∃x(Sx ∧ Wx ∧ ∃y(Sy ∧ Wy ∧ x =/= y ∧ ∀z((Sz ∧ Wz) ⊃ 
