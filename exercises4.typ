@@ -153,4 +153,5 @@
 4. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ ∃y(Py ∧ y =/= x ∧ Axy))
 5. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ ∀y(Py ⊃ Ayx))
 6. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ Agx)
-7. ∃x(Sx ∧ Wx ∧ ∃y(Sy ∧ Wy ∧ x =/= y ∧ ∀z((Sz ∧ Wz) ⊃ 
+7. ∃x(Sx ∧ Wx ∧ ∃y(Sy ∧ Wy ∧ x =/= y ∧ ∀z((Sz ∧ Wz) ⊃ z = x ∨ z = y)))
+
