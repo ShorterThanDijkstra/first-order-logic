@@ -154,4 +154,12 @@
 5. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ ∀y(Py ⊃ Ayx))
 6. ∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Wx ∧ Agx)
 7. ∃x(Sx ∧ Wx ∧ ∃y(Sy ∧ Wy ∧ x =/= y ∧ ∀z((Sz ∧ Wz) ⊃ z = x ∨ z = y)))
+8. ∀x((Sx ∧ Wx) ⊃ ∀y(((Sy ∧ Wy) ∧ y =/= x) ⊃ ∀z(P(z) ⊃ z = x ∨ z = y)))
+9. (Sf ∧ Sg) ⊃ ∃x(Sx ∧ ∃y(Sy ∧ x =/= y))
+10. ∃x(Sx ∧ ∃y(Sy ∧ x =/= y ∧ ∀z(Sz ⊃ (z = x ∨ z = y) ∧ Afx ∧ Afy)))
+11. ¬∃x(Px ∧ ∀y(Py ⊃ Axy))
+12. ∃x(Px ∧ ∃y(Sy ∧ Wy ∧ ∀z(Sz ⊃ z = y) ∧ Axy))
+13. ∃x(Px ∧ ∃y(Py ∧ x =/= y ∧ Axf ∧ Ayf))
+14. Wf ⊃ (∃x(Sx ∧ ∀y(Sy ⊃ y = x) ∧ Axf)
+15. ∃x((Wx ∧ Sx) ∧ ∀y(Sy ⊃ y = x) ∧ Axf) ⊃ ∃x(Px ∧ Axf)
 
