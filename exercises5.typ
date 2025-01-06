@@ -111,3 +111,35 @@
 (5). + ¬∀xFx ∨ Ga                     (4) DeM
 (6). + ∀xFx ⊃ Ga                      (5) Cond 
 
+=== 5.01
+1.
+(1). + ∃x(Fx ∧ Gx)
+(2). ? ¬∀x(Fx ⊃ ¬Gx)
+(3). + ¬∀x(¬(Fx ∧ Gx))    (1) QT
+(4). + ¬∀x(¬Fx ∨ ¬Gx)     (3) DeM
+(5). + ¬∀x(Fx ⊃ ¬Gx)      (4) Cond
+
+2. 
+(1). + ∀x(Fx ⊃ Gx)
+(2). ? ¬∃x(Fx ∧ ¬Gx)
+(3). + ¬∃x(¬(Fx ⊃ Gx))    (1) QT
+(4). + ¬∃x(¬(¬Fx ∨ Gx))   (3) Cond
+(5). + ¬∃x(Fx ∧ ¬Gx)      (4) DeM
+
+3. 
+(1). + ∀x((Fx ∧ Gx) ⊃ Hx)
+(2). ? ¬∃x(Fx ∧ (Gx ∧ ¬Hx))
+(3). + ¬∃x(¬((Fx ∧ Gx) ⊃ Hx))   (1) QT
+(4). + ¬∃x(¬(¬(Fx ∧ Gx) ∨ Hx))  (3) Cond
+(5). + ¬∃x((Fx ∧ Gx) ∧ ¬Hx)     (4) DeM
+(6). + ¬∃x(Fx ∧ (Gx ∧ ¬Hx))     (5) Assoc
+
+4. 
+(1). + ∃x((Fx ∧ Gx) ∨ ¬Hx)
+(2). ? ¬∀x(Hx ∧ (Fx ⊃ ¬Gx))
+(3). + ¬∀x(¬((Fx ∧ Gx) ∨ ¬Hx))   (1) QT
+(4). + ¬∀x(¬(Fx ∧ Gx) ∧ Hx)      (3) DeM
+(5). + ¬∀x((¬Fx ∨ ¬Gx) ∧ Hx)     (4) DeM
+(6). + ¬∀x((Fx ⊃ ¬Gx) ∧ Hx)      (5) Cond
+(7). ? ¬∀x(Hx ∧ (Fx ⊃ ¬Gx))      (6) Com
+
