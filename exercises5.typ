@@ -148,16 +148,82 @@
 (2). ? ¬∃x((Fx ∧ Gx) ⊃ (Fx ⊃ ¬Gx))
 (3). + ¬∃x(¬(Fx ∧ Gx))                 (1) QT
 (4). + ¬∃x(¬(Fx ∧  Gx) ∨  (Fx ⊃ ¬Gx))  (3) ∨ I
-(5). + ¬∃x((Fx ∧ Gx) ∨  (Fx ⊃ ¬Gx))     (4) Cond
-(6).
+(5). + ¬∃x((Fx ∧ Gx) ⊃ (Fx ⊃ ¬Gx))     (4) Cond
 
 6. 
 (1). + ∀x((Fx ⊃ Gx) ∧ Hx)
-(2). ? ¬∃x((¬Hx ∨ Fx) ∧ (Hx ∨ ¬Gx)
+(2). ? ¬∃x((¬Hx ∨ Fx) ∧ (¬Hx ∨ ¬Gx)
+(3). + ¬∃x(¬((Fx ⊃ Gx) ∧ Hx))          (1) QT
+(4). + ¬∃x(¬(Fx ⊃ Gx) ∨ ¬Hx)           (3) DeM
+(5). + ¬∃x(¬(¬Fx ∨ Gx) ∨ ¬Hx)          (4) Cond
+(6). + ¬∃x((Fx ∧ ¬Gx) ∨ ¬Hx)           (5) DeM
+(7). + ¬∃x((Fx ∨ ¬Hx) ∧ (¬Gx ∨ ¬Hx))   (6) Dist
+(8). + ¬∃x((¬Hx ∨ Fx) ∧ (¬Gx ∨ ¬Hx))   (7) Com
+(9). + ¬∃x((¬Hx ∨ Fx) ∧ (¬Hx ∨ ¬Gx))   (8) Com
 
 7.
 (1). + ∃xFx
 (2). ? ∀x¬Fx ⊃ ∃xFx
+(3). + ¬∀x¬Fx            (1) QT
+(4). + ¬∀x¬Fx ∨ ∃xFx     (3) ∨I
+(5). + ∀x¬Fx ⊃ ∃xFx      (4) Cond
 
 8.
+(1). + ∀xFx
+(2). ? ¬(∀xFx ⊃ ¬∀xFx)
+(3). + ∀xFx ∧ ∀xFx       (1) Tauto
+(4). + ¬(¬∀xFx ∨ ¬∀xFx)) (3) DeM
+(5). + ¬(∀xFx ⊃ ¬∀xFx)   (4) Cond
+
+9.
+(1). + ∃xFx ⊃ ∀x¬Fx
+(2). ? ∀x¬F
+(3). + ¬∃xFx ∨ ∀x¬Fx     (1) Cond
+(4). + ∀x¬Fx ∨ ∀x¬Fx     (3) QT
+(5). + ∀x¬Fx             (4) Tauto
+
+10. 
+(1). + ∃x¬Fx
+(2). ? ¬(¬∀xFx ⊃ ∀xFx)
+(3). + ¬∀xFx             (1) QT
+(4). + ¬(∀xFx ∨ ∀xFx)    (3) Tauto
+(5). + ¬(¬∀xFx ⊃ ∀xFx)   (4) Cond
+
+11. 
+(1). + ∀x((Fx ∧ Gx) ⊃ Hx)
+(2). ? ¬∃x(Fx ∧ (Gx ∧ ¬Hx))
+(3). + ¬∃x(¬((Fx ∧ Gx) ⊃ Hx))   (1) QT
+(4). + ¬∃x(¬(¬(Fx ∧ Gx) ∨ Hx))  (3) Cond
+(5). + ¬∃x((Fx ∧ Gx) ∧ ¬Hx)     (4) DeM
+(6). + ¬∃x(Fx ∧ (Gx ∧ ¬Hx))     (5) Assoc
+
+12. 
+(1). + ∀x(Fx ⊃ Gx)
+(2). ? ¬∃x(¬Gx ∧ Fx)
+(3). + ¬∃x(¬(Fx ⊃ Gx))     (1) QT
+(4). + ¬∃x(¬(¬Fx ∨ Gx))    (3) Cond
+(5). + ¬∃x(Fx ∧ ¬Gx)       (4) DeM
+(6). + ¬∃x(¬Gx ∧ Fx)       (5) Com
+
+13. 
+(1). + ¬∀x(Fx ⊃ Gx)
+(2). ? ∃x(Fx ∧ ¬Gx)
+(3). + ∃x(¬(Fx ⊃ Gx))      (1) QT
+(4). + ∃x(¬(¬Fx ∨ Gx))     (3) Cond
+(5). + ∃x(Fx ∧ ¬Gx)        (4) DeM
+
+14. 
+(1). + ∀x(Fx ⊃ (Gx ⊃ Hx))
+(2). ? ¬∃x((Fx ∧ Gx) ∧ ¬Hx)
+(3). + ¬∃x(¬(Fx ⊃ (Gx ⊃ Hx)))  (1) QT
+(4). + ¬∃x(¬((Fx ∧ Gx) ⊃ Hx))  (3) Exp
+(5). + ¬∃x(¬(¬(Fx ∧ Gx) ∨ Hx)) (4) Cond
+(6). + ¬∃x((Fx ∧ Gx) ∧ ¬Hx)    (5) DeM
+
+15.
+(1). + ¬∃x((Fx ∨ Gx) ∧ Hx)
+(2). ? ∀x((¬Fx ∧ ¬Gx) ∨ ¬Hx)
+(3). + ∀x(¬((Fx ∨ Gx) ∧ Hx))   (1) QT
+(4). + ∀x(¬(Fx ∨ Gx) ∨ ¬Hx)    (3) DeM
+(5). + ∀x((¬Fx ∧ ¬Gx) ∨ ¬Hx)   (4) DeM
 
