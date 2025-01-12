@@ -845,42 +845,107 @@
 4. 
 (1). + ∀x(Fx ∧ Gx)
 (2). ? ∀xFx ∧ ∀xGx
-(3). 
-(4). 
-(5). 
+(3). + Fa ∧ Ga             (1) UI
+(4). + Fa                  (3) ∧E
+(5). + Ga                  (3) ∧E
+(6). + ∀xFx                (4) UG
+(7). + ∀xGx                (5) UG
+(8). + ∀xFx ∧ ∀xGx         (6),(7) ∧I
+
 
 6. 
 (1). + ∃x(Fx ∨ Hx)
 (2). + ∀x(Hx ⊃ Fx)
 (3). + ∃xGx ⊃ ∀x(Gx ⊃ Hx)
 (4). ? ∀x(Gx ⊃ Fx)
-(5). 
+     ------
+(5). | Ga
+(6). | ? Fa
+(7). | ∃xGx              (5) EG
+(8). | ∀x(Gx ⊃ Hx)       (3),(7) MP
+(9). | Ga ⊃ Ha           (8) UI
+(10).| Ha                (5),(9) MP
+(11).| Ha ⊃ Fa           (2) UI
+(12).| Fa                (10),(11) MP
+     ------
+(13). Ga ⊃ Fa            (5)-(12) CP
+(14). ∀x(Gx ⊃ Fx)        (13) UG
 
 8. 
 (1). + ∀x(Fx ⊃ Gx)
 (2). + ∀x∃y(Fy ∧ Hxy)
 (3). ? ∀x∃y(Gy ∧ Hxy)
-(4). 
-(5). 
+(4). + ∃y(Fy ∧ Hay)           (2) UI
+(5). + Fb ∧ Hab               (4) EI
+(6). + Fb                     (5) ∧E
+(7). + Fb ⊃ Gb                (1) UI
+(8). + Gb                     (6),(7) MP
+(9). + Hab                    (5) ∧E
+(10).+ Gb ∧ Hab               (8),(9) ∧I
+(11).+ ∃y(Gy ∧ Hay)           (10) EG
 
 10. 
 (1). + ∀x((Fx ∧ ¬∃yHxy) ⊃ Gx)
 (2). + ∀x(Jx ⊃ (Fx ∧ ¬(Kx ∨ Gx)))
 (3). ? ∀x(Jx ⊃ ∃yHxy)
-(4). 
-(5). 
+     ------
+(4). | ¬∀x(Jx ⊃ ∃yHxy)
+(5). | ? x
+(6). | ¬∀x(¬Jx ∨ ∃yHxy)        (4) Cond
+(7). | ∃x¬(¬Jx ∨ ∃yHxy)        (6) QT
+(8). | ∃x(Jx ∧ ¬∃yHxy)         (7) DeM
+(9). | Ja ∧ ¬∃yHay             (8) EI
+(10).| Ja                      (9) ∧E
+(11).| Ja ⊃ (Fa ∧ ¬(Ka ∨ Ga))  (2) UI
+(12).| Fa ∧ ¬(Ka ∨ Ga)         (10),(11) MP
+(13).| Fa                      (12) ∧E
+(14).| ¬∃yHay                  (9) ∧E
+(15).| Fa ∧ ¬∃yHay             (13),(14) ∧I
+(16).| (Fa ∧ ¬∃yHay) ⊃ Ga      (1) UI
+(17).| Ga                      (15),(16) MP
+(18).| ¬(Ka ∨ Ga)              (12) ∧E
+(19).| ¬Ka ∧ ¬Ga               (18) DeM
+(20).| ¬Ga                     (19) ∧E
+(21).| Ga ∧ ¬Ga                (17),(20) ∧I
+     ------
+(22). + ∀x(Jx ⊃ ∃yHxy)         (4)-(21) IP
 
 12. 
 (1). + ∃x(Fx ∧ ∀y(Gy ⊃ Hxy))
 (2). + ∀x(Fx ⊃ ∀y(Jy ⊃ ¬Hxy))
 (3). ? ∀x(Gx ⊃ ¬Jx)
-(4). 
-(5). 
+     ------
+(4). | Ga
+(5). | ? ¬Ja 
+(6). | Fb ∧ ∀y(Gy ⊃ Hby)        (1) EI
+(7). | ∀y(Gy ⊃ Hby)             (6) ∧E
+(8). | Ga ⊃ Hba                 (7) UI
+(9). | Hba                      (4),(8) MP
+(10).| Fb ⊃ ∀y(Jy ⊃ ¬Hby)       (2) UI
+(11).| Fb                       (6) ∧E
+(12).| ∀y(Jy ⊃ ¬Hby)            (10),(11) MP
+(13).| Ja ⊃ ¬Hba                (12) UI
+(14).| ¬Ja                      (9),(13) MT
+     ------
+(15). + Ga ⊃ ¬Ja                (4)-(14) CP
+(16). + ∀x(Gx ⊃ ¬Jx)            (15) UG
 
 14. 
 (1). + ∀x(∃yGyx ⊃ Gxx)
 (2). + ∀x(Fx ⊃ (∃yGxy ⊃ ∃yGyx))
 (3). + ¬∃xGxx
 (4). ? ∀x(Fx ⊃ ∀y¬Gxy)
-(5). 
-
+     ------
+(5). | Fa
+(6). | ? ∀y¬Gay
+(7). | Fa ⊃ (∃yGay ⊃ ∃yGya)       (2) UI
+(8). | ∃yGay ⊃ ∃yGya              (5),(7) MP
+(9). | ∃yGya ⊃ Gaa                (1) UI
+(10).| ∀x¬Gxx                     (3) QT
+(11).| ¬Gaa                       (10) UI
+(12).| ¬∃yGya                     (9),(11) MT
+(13).| ¬∃yGay                     (8),(12) MT
+(14).| ∀y¬Gay                     (13) QT
+     ------
+(15). + Fa ⊃ ∀y¬Gay               (5)-(14) CP
+(16). + ∀x(Fx ⊃ ∀y¬Gxy)           (15) UG
