@@ -1319,3 +1319,39 @@
 (17).| Gg ∧ ¬Gg                             (12),(16) ∧I
      ------
 (18). ∃x∀y(Fx ⊃ Gy) ⊃ (∀xFx ⊃ ∀xGx)         (1)-(17) IP
+
+== 5.09
+2.
+((Fa -> Ga) & (!Fa -> Ha)) -> (!Ga -> !Ha)
+
+(Fa,False),(Ga,False),(Ha,True)
+
+4.
+(((Fa -> (Gaa || Gab)) & (Fb -> (Gba || Gbb))) & (Fa || Fb) & (Gaa || Gab || Gbb || Gba)) -> ((Gaa || Gab) & (Gba || Gbb))
+
+(Fa,False),(Gaa,False),(Gab,False),(Fb,True),(Gba,False),(Gbb,True)
+
+6.
+((Fa -> (Gaa & Gba)) || (Fb -> (Gab & Gbb))) & ((Fa & (Haa || Hab)) & (Fb & (Hba || Hbb))) -> (((Gaa & Haa) & (Gab & Hba)) || ((Gba & Hab) & (Gbb & Hbb)))
+
+(Fa,True),(Gaa,False),(Gba,False),(Fb,True),(Gab,True),(Gbb,True),(Haa,False),(Hab,True),(Hba,False),(Hbb,True)
+
+8. 
+((Fa -> (Ga & Ha)) & Fa) -> !Ha
+
+(Fa,True),(Ga,True),(Ha,True)
+
+10. 
+((Fa -> (Fa -> Ja)) & (Fa & (Ga || Ha))) -> (Fa -> Ha)
+
+(Fa,True),(Ja,True),(Ga,True),(Ha,False)
+
+12.
+(Faa & Fab) -> (Faa & Fab & Fba & Fbb)
+
+(Faa,True),(Fab,True),(Fba,False),(Fbb,False)
+
+14.
+(((Fa & Ga) || (Fb & Gb)) & ((Ga -> Ha) & (Gb -> Hb))) -> ((Ga || Ga) & (Gb || Fb))
+
+(Fa,False),(Ga,False),(Fb,True),(Gb,True),(Ha,False),(Hb,True)
