@@ -1355,3 +1355,34 @@
 (((Fa & Ga) || (Fb & Gb)) & ((Ga -> Ha) & (Gb -> Hb))) -> ((Ga || Ga) & (Gb || Fb))
 
 (Fa,False),(Ga,False),(Fb,True),(Gb,True),(Ha,False),(Hb,True)
+
+=== 5.10
+2. 
+(1). ∀x(Cx ⊃ ∀y(Fy ⊃ Lxy))
+(2). ∀x(Cx ⊃ ∀y(¬Fy ∨ Lxy))   Cond
+(3). ∀x(¬Cx ∨ ∀y(¬Fy ∨ Lxy))  Cond
+(4). ∀x∀y(¬Cx ∨ (¬Fy ∨ Lxy))  PNF
+
+4. 
+(1). ¬∃x∀y(Ly ⊃ Txy)
+(2). ¬∃x∀y(¬Ly ∨ Txy)    Cond
+(3). ∀x¬∀y(¬Ly ∨ Txy)    QT
+(4). ∀x∃y¬(¬Ly ∨ Txy)    QT
+(5). ∀x∃y(Ly ∧ ¬Txy)     DeM
+
+6. 
+(1). ¬∃x(Hx ∧ Bx) ⊃ ∃x(Hx ∧ Dx)
+(2). ∃x(Hx ∧ Bx) ∨ ∃x(Hx ∧ Dx)   Cond
+(3). ∃x(Hx ∧ Bx) ∨ ∃y(Hy ∧ Dy)   x => y
+(4). ∃x∃y((Hx ∧ Bx) ∨ (Hy ∧ Dy)) PNF
+
+8. 
+(1). ∃x(Px ∧ ∃y(Py ∧ x ≠ y))
+(2). ∃x∃y(Px ∧ (Py ∧ x =/= y))  PNF
+
+10. 
+(1). Me ∧ ∀x((Mx ∧ x =/= e) ⊃ Wex) 
+(2). Me ∧ ∀x(¬(Mx ∧ x =/= e) ∨ Wex)    Cond
+(3). Me ∧ ∀x((¬Mx ∨ x = e) ∨ Wex)      DeM
+(4). ∀x(Me ∧ ((¬Mx ∨ x = e) ∨ Wex))    PNF
+
